@@ -2,8 +2,8 @@
 
 :root {
     --clr-background: #f6f7fb;
-    --clr-progress-line-bg: #e0e0e0;
-    --clr-progress-line: #3498ab;
+    --clr-line-fill: #e0e0e0;
+    --clr-line-empty: #3498ab;
     --ff-primary: "Muli", sans-serif;
 }
 
