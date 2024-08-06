@@ -2,7 +2,8 @@
 
 :root {
     --clr-background: #f6f7fb;
-    --clr-progress-line-bg: #3498ab;
+    --clr-progress-line-bg: #e0e0e0;
+    --clr-progress-line: #3498ab;
     --ff-primary: "Muli", sans-serif;
 }
 
@@ -33,4 +34,32 @@ body {
     margin-bottom: 30px;
     max-width: 100%;
     width: 350px;
+    /* background-color: red; */
+}
+
+/* gray-line */
+.progress-container::before {
+    content: "";
+    background-color: var(--clr-progress-line-bg);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 100%;
+    z-index: -1;
+}
+
+.progress-line {
+    background-color: var(--clr-progress-line);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    /* puts the middle of the line in the 'middle' by moving it up 50% */
+    transform: translateY(-50%);
+    height: 4px;
+    width: 0%;
+    /* movies it behind the numbers */
+    z-index: -1;
+    transition: 0.4s ease;
 }
