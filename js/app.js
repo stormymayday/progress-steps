@@ -40,4 +40,13 @@ const update = () => {
 
     progressLine.style.width =
         ((activeCircles.length - 1) / (circles.length - 1)) * 100 + "%";
+
+    if (currentActiveCircle === 1) {
+        prevBtn.disabled = true;
+    } else if (currentActiveCircle === circles.length) {
+        nextBtn.disabled = true;
+    } else {
+        prevBtn.disabled = false;
+        nextBtn.disabled = false;
+    }
 };
